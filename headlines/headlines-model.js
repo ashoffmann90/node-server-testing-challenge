@@ -11,9 +11,9 @@ function find(){
 }
 
 async function add(headline){
-    return null
+    return db('headlines').insert(headline)
 }
 
 function remove(id){
-    return null
+    return db('headlines').where({id}).del(id)
 }
